@@ -1,4 +1,4 @@
-# Angular Test Project
+# Angular User Management System !
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.6.
 
@@ -7,7 +7,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 1. **Single Page Application with Multiple Components:**
    - Two main components created under the `pages` directory:
      - `add-form`: Handles both adding and editing users.
+     - `OutPut`: ![alt text](image-1.png)
      - `form-list`: Displays the list of users with search, filter, pagination, and sorting functionalities.
+     - `See Output`:![alt text](image.png)
 
 2. **User List with Search and Filter Options:**
    - The `form-list` component allows users to search and filter the displayed list of users.
