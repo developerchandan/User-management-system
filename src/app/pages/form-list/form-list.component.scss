@@ -1,0 +1,204 @@
+.container {
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  color: #333333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.row.mb-3 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+}
+
+input[type="text"],
+select {
+  border: 1px solid #ced4da;
+  padding: 10px;
+  border-radius: 4px;
+  width: 100%;
+}
+
+input[type="text"]:focus,
+select:focus {
+  outline: none;
+  border-color: #002d62;
+  box-shadow: 0 0 5px rgba(4, 80, 161, 0.5);
+}
+
+select {
+  font-size: 14px;
+  color: #333333;
+}
+
+select option {
+  padding: 8px;
+}
+
+.table-responsive {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 16px !important;
+  text-align: left;
+  border: 1px solid #dee2e6;
+}
+
+.table th {
+  background-color: #002d62;
+  color: white;
+  cursor: pointer;
+}
+
+.table tbody tr:nth-child(odd) {
+  background-color: #f8f9fa;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.btn-group {
+  display: flex;
+  gap: 8px;
+}
+
+.btn {
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  color: white;
+}
+
+.btn-warning:hover {
+  background-color: #e0a800;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-danger:disabled {
+  background-color: #e6e6e6;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+.btn-danger:hover:not(:disabled) {
+  background-color: #c82333;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination .page-item {
+  margin: 0 5px;
+  list-style: none;
+}
+
+.pagination .page-link {
+  display: block;
+  padding: 8px 12px;
+  border: 1px solid #dee2e6;
+  color: #002d62;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.pagination .page-link:hover {
+  background-color: #002d62;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .row.mb-3 {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .table tbody,
+  .table thead,
+  .table tr {
+    display: block;
+    width: 100%;
+  }
+
+  .table thead {
+    display: none;
+  }
+
+  .table tbody tr {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+  }
+
+  .table td {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-size: 14px;
+  }
+
+  .table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #002d62;
+    flex: 1;
+  }
+
+  .table td:last-child {
+    text-align: right;
+  }
+}
+
+@media (max-width: 576px) {
+  .btn {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+
+  input[type="text"],
+  select {
+    font-size: 14px;
+    padding: 8px;
+    width: 340px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+}

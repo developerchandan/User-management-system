@@ -1,0 +1,155 @@
+.main-footer {
+  background-color: #fff;
+  color: #333;
+  padding: 20px 20px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+  gap: 20px;
+}
+
+.branding {
+  text-align: center;
+  flex: 1;
+}
+
+.branding .logo {
+  max-width: 120px;
+  margin: 0 auto 10px;
+}
+
+.branding .social-icons {
+  margin-top: 10px;
+}
+
+.branding .social-icons a {
+  margin: 0 5px;
+  color: #003366;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.branding .social-icons a:hover {
+  color: #007bff;
+}
+
+.footer-links {
+  display: flex;
+  flex: 4;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-links div {
+  min-width: 180px;
+}
+
+.footer-links h4 {
+  font-size: 16px;
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links li a {
+  color: #003366;
+  transition: color 0.3s ease;
+}
+
+.footer-links li a:hover {
+  color: #007bff;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.footer-nav {
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.footer-nav a {
+  margin: 0 10px;
+  color: #003366;
+  font-weight: bold;
+}
+
+.footer-nav a:hover {
+  color: #007bff;
+}
+
+.footer-bottom p {
+  margin: 5px 0;
+  font-size: 12px;
+}
+
+@media (max-width: 1024px) {
+  .footer-top {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-links {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .footer-links div {
+    min-width: auto;
+    flex: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .branding {
+    margin-bottom: 20px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .footer-links div {
+    min-width: auto;
+    text-align: center;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-nav a {
+    margin: 5px 0;
+  }
+}

@@ -1,0 +1,78 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>User List</h1>
+      <div class="row mb-3">
+        <div class="col-md-4">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Search by Name or Email"
+            [(ngModel)]="searchTerm"
+            (input)="applyFilter()"
+          />
+        </div>
+        <div class="col-md-4">
+          <select
+            class="form-control"
+            [(ngModel)]="statusFilter"
+            (change)="applyFilter()"
+          >
+            <option value="">All</option>
+            <option value="Active">Active</option>
+            <option value="Inactive">Inactive</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th (click)="sortData('id')">ID</th>
+              <th (click)="sortData('name')">Name</th>
+              <th (click)="sortData('email')">Email</th>
+              <th (click)="sortData('role')">Role</th>
+              <th (click)="sortData('status')">Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of paginatedUsers">
+              <td data-label="ID">{{ user.id }}</td>
+              <td data-label="Name">{{ user.name }}</td>
+              <td data-label="Email">{{ user.email }}</td>
+              <td data-label="Role">{{ user.role }}</td>
+              <td data-label="Status">{{ user.status }}</td>
+              <td>
+                <div class="btn-group">
+                  <button
+                    class="btn btn-warning btn-sm"
+                    (click)="editUser(user._id)"
+                  >
+                    Edit
+                  </button>
+                  <button
+                    class="btn btn-danger btn-sm"
+                    (click)="deleteUser(user._id)"
+                    [disabled]="user.status === 'Inactive'"
+                  >
+                    Delete
+                  </button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <nav>
+        <ul class="pagination">
+          <li class="page-item" *ngFor="let page of pages">
+            <a class="page-link" (click)="changePage(page)">{{ page }}</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
